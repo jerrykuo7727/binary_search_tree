@@ -1,9 +1,8 @@
 class Node
-  attr_accessor :value, :parent, :left, :right
+  attr_accessor :value, :left, :right
 
   def initialize(value=nil)
     @value = value
-    @parent = nil
     @left = nil
     @right = nil
   end
@@ -38,6 +37,3 @@ def build_tree(arr)
   end
   head
 end
-
-arr = [1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]
-head = build_tree(arr)
