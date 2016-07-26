@@ -11,7 +11,7 @@ end
 
 def build_tree(arr)
   head = nil
-  arr.each do |data|
+  arr.uniq.each do |data|
     new_node = Node.new(data)
     if head == nil
       head = new_node
@@ -36,7 +36,8 @@ def build_tree(arr)
       end
     end
   end
+  head
 end
 
-arr = [1, 4, 23, 8, 9, 3, 5, 7, 67, 6345, 324]
-build_tree(arr)
+arr = [1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]
+head = build_tree(arr)
